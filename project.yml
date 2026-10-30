@@ -1,0 +1,39 @@
+name: Bonjeff
+options:
+  bundleIdPrefix: com.lapcatsoftware
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+configFiles:
+  Debug: Base.xcconfig
+  Release: Base.xcconfig
+targets:
+  Bonjeff:
+    type: application
+    platform: macOS
+    sources:
+      - path: source
+      - path: nonsource
+        excludes:
+          - Info.plist
+          - Bonjeff.entitlements
+      - path: LICENSE.txt
+    configFiles:
+      Debug: Debug.xcconfig
+      Release: Release.xcconfig
+    scheme:
+      testTargets:
+        - BonjeffTests
+      gatherCoverageData: true
+  BonjeffTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: Bonjeff
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lapcatsoftware.bonjeff.tests
+        GENERATE_INFOPLIST_FILE: YES
