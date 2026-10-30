@@ -1,4 +1,4 @@
-// Generates the Bonjeff app icon in the macOS 11+ rounded-square style.
+// Generates the BonjourView app icon in the macOS 11+ rounded-square style.
 // Usage: swift scripts/generate-icon.swift nonsource/Assets.xcassets/AppIcon.appiconset
 import AppKit
 

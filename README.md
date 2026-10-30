@@ -1,6 +1,6 @@
-# Bonjeff
+# BonjourView
 
-Bonjeff is a Mac app that shows you a live display of the Bonjour services published on your network. Bonjeff is intended as a replacement for the discontinued Bonjour Browser app by Tildesoft. Bonjour Browser predated Gatekeeper and thus is not code signed with a Developer ID certificate or notarized by Apple. Bonjeff is validly code signed and notarized, which allows it to be installed on Macs protected by Gatekeeper.
+BonjourView (formerly Bonjeff) is a Mac app that shows you a live display of the Bonjour services published on your network. BonjourView is intended as a replacement for the discontinued Bonjour Browser app by Tildesoft. Bonjour Browser predated Gatekeeper and thus is not code signed with a Developer ID certificate or notarized by Apple. BonjourView is validly code signed and notarized, which allows it to be installed on Macs protected by Gatekeeper.
 
 ![ScreenShot](screenshots/bonjeff_ui_v3.png)
 
@@ -19,7 +19,7 @@ Requires macOS 14 Sonoma or later.
 
 ### Identify
 
-Bonjeff names service types from several sources, in this order:
+BonjourView names service types from several sources, in this order:
 
 1. **Your own names.** Right-click a type and choose **Rename…**. Your name is shown with the protocol underneath and persists across launches. **Use Default Name** reverts.
 2. **A curated list** of about 90 common types with names, icons and URL schemes, from AirPlay and printers to Thread border routers and Apple's Continuity services.
@@ -63,25 +63,25 @@ Open with ⌘,.
 
 ## Privacy
 
-Bonjeff is sandboxed and runs with the hardened runtime. It listens to Bonjour on your local network and resolves the services you look at. The only outbound request it ever makes is the optional weekly download of the IANA registry file, which carries no information about you or your network. There are no analytics, no accounts and no third-party code.
+BonjourView is sandboxed and runs with the hardened runtime. It listens to Bonjour on your local network and resolves the services you look at. The only outbound request it ever makes is the optional weekly download of the IANA registry file, which carries no information about you or your network. There are no analytics, no accounts and no third-party code.
 
 On macOS 15 and later the system asks for Local Network permission on first launch. If the sidebar stays empty, check System Settings › Privacy & Security › Local Network.
 
 ## Installing
 
-1. Download `Bonjeff-<version>.dmg` from the [latest release](https://github.com/hov172/Bonjeff/releases/latest).
-2. Open the disk image and drag `Bonjeff` to the Applications folder.
+1. Download `BonjourView-<version>.dmg` from the [latest release](https://github.com/hov172/BonjourView/releases/latest).
+2. Open the disk image and drag `BonjourView` to the Applications folder.
 
-The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. Jeff Johnson's original releases remain available at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff/releases).
+The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. Jeff Johnson's original Bonjeff releases remain available at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff/releases).
 
 ## Uninstalling
 
-1. Move `Bonjeff.app` to the Trash.
-2. Optionally remove its preferences and cached registry: `~/Library/Containers/com.lapcatsoftware.bonjeff`.
+1. Move `BonjourView.app` to the Trash.
+2. Optionally remove its preferences and cached registry: `~/Library/Containers/com.ayalasolutions.bonjourview`.
 
 ## Building
 
-The Xcode project is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen). The generated `Bonjeff.xcodeproj` is committed, so XcodeGen is only needed when you add or remove files:
+The Xcode project is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen). The generated `BonjourView.xcodeproj` is committed, so XcodeGen is only needed when you add or remove files:
 
 ```
 brew install xcodegen
@@ -91,7 +91,7 @@ xcodegen generate
 Run the tests with ⌘U in Xcode or:
 
 ```
-xcodebuild test -scheme Bonjeff -destination 'platform=macOS'
+xcodebuild test -scheme BonjourView -destination 'platform=macOS'
 ```
 
 Maintenance scripts:
@@ -128,7 +128,7 @@ The [.gitignore](.gitignore) file keeps `DEVELOPMENT_TEAM.xcconfig` out of the r
 
 ## Credits
 
-Bonjeff was created by [Jeff Johnson](https://lapcatsoftware.com/) of Lapcat Software. The original project lives at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff), and its discovery design is still the heart of this app: the meta-query that enumerates service types, lazy resolving, case-insensitive de-duplication, and the careful handling of malformed TXT records all come from that code.
+BonjourView began as Bonjeff, created by [Jeff Johnson](https://lapcatsoftware.com/) of Lapcat Software. The original project lives at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff), and its discovery design is still the heart of this app: the meta-query that enumerates service types, lazy resolving, case-insensitive de-duplication, and the careful handling of malformed TXT records all come from that code.
 
 This version started from the fork at [github.com/YesThatAllen/Bonjeff](https://github.com/YesThatAllen/Bonjeff), whose maintainer also contributed README updates to the original project. The hex display of binary TXT record data in Bonjeff 2.0.1 was contributed upstream by [bauerschwan](https://github.com/bauerschwan).
 

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct BonjeffApp: App {
+struct BonjourViewApp: App {
 	@NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
 	@State private var browser = BonjourBrowser()
 
@@ -12,7 +12,7 @@ struct BonjeffApp: App {
 		}
 		.defaultSize(width: 1120, height: 680)
 		.commands {
-			BonjeffCommands(browser: browser)
+			BonjourViewCommands(browser: browser)
 		}
 
 		Settings {

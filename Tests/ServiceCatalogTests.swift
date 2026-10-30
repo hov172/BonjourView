@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Bonjeff
+@testable import BonjourView
 
 struct ServiceCatalogTests {
 	@Test func normalizesCaseAndTrailingDots() {
@@ -50,8 +50,8 @@ struct ServiceCatalogTests {
 	}
 
 	@Test func customNameOverridesEverythingAndEmptyRestores() throws {
-		let suite = try #require(UserDefaults(suiteName: "BonjeffTests.CustomTypeNames"))
-		suite.removePersistentDomain(forName: "BonjeffTests.CustomTypeNames")
+		let suite = try #require(UserDefaults(suiteName: "BonjourViewTests.CustomTypeNames"))
+		suite.removePersistentDomain(forName: "BonjourViewTests.CustomTypeNames")
 		let names = CustomTypeNames(defaults: suite)
 		let registry = IANARegistry(descriptions: [:])
 

@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Bonjeff
+@testable import BonjourView
 
 struct InstanceNameDecoderTests {
 	@Test func opaqueNamesAreDetected() {

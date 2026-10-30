@@ -1,6 +1,6 @@
-name: Bonjeff
+name: BonjourView
 options:
-  bundleIdPrefix: com.lapcatsoftware
+  bundleIdPrefix: com.ayalasolutions
   deploymentTarget:
     macOS: "14.0"
   createIntermediateGroups: true
@@ -9,7 +9,7 @@ configFiles:
   Debug: Base.xcconfig
   Release: Base.xcconfig
 targets:
-  Bonjeff:
+  BonjourView:
     type: application
     platform: macOS
     sources:
@@ -17,23 +17,23 @@ targets:
       - path: nonsource
         excludes:
           - Info.plist
-          - Bonjeff.entitlements
+          - BonjourView.entitlements
       - path: LICENSE.txt
     configFiles:
       Debug: Debug.xcconfig
       Release: Release.xcconfig
     scheme:
       testTargets:
-        - BonjeffTests
+        - BonjourViewTests
       gatherCoverageData: true
-  BonjeffTests:
+  BonjourViewTests:
     type: bundle.unit-test
     platform: macOS
     sources:
       - path: Tests
     dependencies:
-      - target: Bonjeff
+      - target: BonjourView
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.lapcatsoftware.bonjeff.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.ayalasolutions.bonjourview.tests
         GENERATE_INFOPLIST_FILE: YES

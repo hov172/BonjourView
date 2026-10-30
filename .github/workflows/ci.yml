@@ -17,8 +17,8 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild test \
-            -project Bonjeff.xcodeproj \
-            -scheme Bonjeff \
+            -project BonjourView.xcodeproj \
+            -scheme BonjourView \
             -destination 'platform=macOS' \
             -derivedDataPath DerivedData \
             CODE_SIGNING_ALLOWED=NO \

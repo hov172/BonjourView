@@ -68,7 +68,7 @@ struct SidebarView: View {
 				Label("Browsing Failed", systemImage: "exclamationmark.triangle")
 			} description: {
 				Text(error)
-				Text("Check that Bonjeff is allowed to find devices on the local network in System Settings › Privacy & Security › Local Network.")
+				Text("Check that BonjourView is allowed to find devices on the local network in System Settings › Privacy & Security › Local Network.")
 			} actions: {
 				Button("Try Again") { browser.restart() }
 			}

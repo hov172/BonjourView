@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Bonjeff
+@testable import BonjourView
 
 struct ServiceExportTests {
 	private func instance(name: String = "Office Printer") -> ServiceInstance {

@@ -29,7 +29,7 @@ struct ContentView: View {
 				.inspectorColumnWidth(min: 250, ideal: 280, max: 480)
 		}
 		.searchable(text: $searchText, placement: .toolbar, prompt: "Filter services")
-		.navigationTitle("Bonjeff")
+		.navigationTitle("BonjourView")
 		.navigationSubtitle(selectedType?.kind.name ?? "")
 		.frame(minWidth: 720, minHeight: 420)
 		.focusedSceneValue(\.serviceActions, actions)

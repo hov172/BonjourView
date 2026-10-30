@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct BonjeffCommands: Commands {
+struct BonjourViewCommands: Commands {
 	let browser: BonjourBrowser
 	@Environment(\.openWindow) private var openWindow
 	@Environment(\.openURL) private var openURL
 	@FocusedValue(\.serviceActions) private var actions
 	@FocusedValue(\.inspectorPresented) private var inspectorPresented
 
-	private static let websiteURL = URL(string: "https://github.com/lapcat/Bonjeff")!
+	private static let websiteURL = URL(string: "https://github.com/hov172/BonjourView")!
 
 	private var selection: [ServiceInstance] { actions?.selection ?? [] }
 
@@ -52,7 +52,7 @@ struct BonjeffCommands: Commands {
 		}
 
 		CommandGroup(replacing: .help) {
-			Link("Bonjeff Website", destination: Self.websiteURL)
+			Link("BonjourView Website", destination: Self.websiteURL)
 			Button("License") { openWindow(id: WindowID.license) }
 		}
 	}

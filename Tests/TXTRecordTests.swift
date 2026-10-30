@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Bonjeff
+@testable import BonjourView
 
 struct TXTRecordTests {
 	/// Encodes strings in the DNS-SD wire format: one length byte followed by the bytes.
