@@ -2,7 +2,7 @@
 
 Bonjeff is a Mac app that shows you a live display of the Bonjour services published on your network. Bonjeff is intended as a replacement for the discontinued Bonjour Browser app by Tildesoft. Bonjour Browser predated Gatekeeper and thus is not code signed with a Developer ID certificate or notarized by Apple. Bonjeff is validly code signed and notarized, which allows it to be installed on Macs protected by Gatekeeper.
 
-![ScreenShot](screenshots/bonjeff_ui.png)
+![ScreenShot](screenshots/bonjeff_ui_v3.png)
 
 Requires macOS 14 Sonoma or later.
 
