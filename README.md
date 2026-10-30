@@ -111,7 +111,7 @@ The [.gitignore](.gitignore) file keeps `DEVELOPMENT_TEAM.xcconfig` out of the r
 ### Continuous integration
 
 - `.github/workflows/ci.yml` builds and runs the tests on every push and pull request.
-- `.github/workflows/release.yml` runs when a `v*` tag is pushed: it archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and publishes the zip as a GitHub release. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
+- `.github/workflows/release.yml` is started manually from the Actions tab with a tag name: it archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and publishes the zip as a GitHub release. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
 
 ### Project layout
 
