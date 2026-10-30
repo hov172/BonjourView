@@ -140,6 +140,18 @@ Original author: [Jeff Johnson](https://lapcatsoftware.com/)
 
 To support the original author, you can [PayPal.Me](https://www.paypal.me/JeffJohnsonWI) or buy StopTheMadness Pro in the [Mac App Store](https://apps.apple.com/app/stopthemadness/id6471380298?mt=12).
 
+## 🌐 Connect With Me
+
+- [GitHub](https://github.com/hov172)
+- [PowerShell Gallery](https://www.powershellgallery.com/profiles/hov172)
+- 📨 Slack: **@Hov172**
+- 🕹️ Discord: **Jay172_**
+- [LinkedIn](https://www.linkedin.com/in/jesus-a-785bb616?trk=people-guest_people_search-card)
+- 🐦 [Twitter / X (@AyalaSolutions)](https://twitter.com/AyalaSolutions)
+- <a href="https://bsky.app/profile/ayalasolutions.bsky.social"><img src="https://raw.githubusercontent.com/bluesky-social/social-app/main/assets/logo.png" width="20" alt="Bluesky Logo"></a> [@AyalaSolutions](https://bsky.app/profile/ayalasolutions.bsky.social)
+- [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/hov172)
+- 📧 *Contact via GitHub, Social accounts issues or discussions*
+
 ## Copyright
 
 Bonjeff is Copyright © 2017-2026 Jeff Johnson. All rights reserved.
