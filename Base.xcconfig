@@ -1,5 +1,5 @@
-#include "DEVELOPMENT_TEAM.xcconfig"
-// Create DEVELOPMENT_TEAM.xcconfig next to this file with:
+#include? "DEVELOPMENT_TEAM.xcconfig"
+// Optional. Create DEVELOPMENT_TEAM.xcconfig next to this file for code signing, containing:
 // DEVELOPMENT_TEAM = [Your TeamID]
 
 MACOSX_DEPLOYMENT_TARGET = 14.0
