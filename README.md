@@ -159,3 +159,7 @@ Bonjeff is Copyright © 2017-2026 Jeff Johnson. All rights reserved.
 ## License
 
 See the [LICENSE.txt](LICENSE.txt) file for details.
+
+---
+
+⭐ *If you find my tools useful, consider giving them a star to support future development!*
