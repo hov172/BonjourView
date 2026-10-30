@@ -69,9 +69,10 @@ On macOS 15 and later the system asks for Local Network permission on first laun
 
 ## Installing
 
-1. Download the [latest release](https://github.com/lapcat/Bonjeff/releases/latest).
-2. Unzip the downloaded `.zip` file.
-3. Move `Bonjeff.app` to your Applications folder.
+1. Download `Bonjeff-<version>.dmg` from the [latest release](https://github.com/hov172/Bonjeff/releases/latest).
+2. Open the disk image and drag `Bonjeff` to the Applications folder.
+
+The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. Jeff Johnson's original releases remain available at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff/releases).
 
 ## Uninstalling
 
@@ -111,7 +112,7 @@ The [.gitignore](.gitignore) file keeps `DEVELOPMENT_TEAM.xcconfig` out of the r
 ### Continuous integration
 
 - `.github/workflows/ci.yml` builds and runs the tests on every push and pull request.
-- `.github/workflows/release.yml` is started manually from the Actions tab with a tag name: it archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and publishes the zip as a GitHub release. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
+- `.github/workflows/release.yml` is started manually from the Actions tab with a tag name: it archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and publishes the zip as a GitHub release. Releases so far were built locally with the same steps plus a signed and notarized `.dmg`. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
 
 ### Project layout
 
