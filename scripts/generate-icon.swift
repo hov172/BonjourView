@@ -21,9 +21,9 @@ let image = NSImage(size: NSSize(width: canvas, height: canvas), flipped: false)
 	NSGraphicsContext.restoreGraphicsState()
 
 	let gradient = NSGradient(colors: [
-		NSColor(srgbRed: 1.00, green: 0.62, blue: 0.24, alpha: 1),
-		NSColor(srgbRed: 0.93, green: 0.40, blue: 0.10, alpha: 1),
-		NSColor(srgbRed: 0.80, green: 0.27, blue: 0.06, alpha: 1),
+		NSColor(srgbRed: 0.20, green: 0.55, blue: 0.60, alpha: 1),
+		NSColor(srgbRed: 0.10, green: 0.40, blue: 0.48, alpha: 1),
+		NSColor(srgbRed: 0.05, green: 0.26, blue: 0.34, alpha: 1),
 	])!
 	gradient.draw(in: path, angle: -90)
 
@@ -32,6 +32,15 @@ let image = NSImage(size: NSSize(width: canvas, height: canvas), flipped: false)
 	path.addClip()
 	let sheen = NSGradient(colors: [NSColor.white.withAlphaComponent(0.22), NSColor.white.withAlphaComponent(0)])!
 	sheen.draw(in: NSRect(x: square.minX, y: square.midY, width: square.width, height: square.height / 2), angle: -90)
+
+	// Dashed radar rings behind the glyph, hinting at broadcast discovery.
+	NSColor.white.withAlphaComponent(0.28).setStroke()
+	for radius in [220.0, 300.0, 380.0] as [CGFloat] {
+		let ring = NSBezierPath(ovalIn: NSRect(x: square.midX - radius, y: square.midY - radius + 10, width: radius * 2, height: radius * 2))
+		ring.lineWidth = 10
+		ring.setLineDash([22, 18], count: 2, phase: 0)
+		ring.stroke()
+	}
 	NSGraphicsContext.restoreGraphicsState()
 
 	// Binoculars glyph, white with a soft shadow.
