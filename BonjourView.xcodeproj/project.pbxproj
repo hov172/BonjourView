@@ -104,9 +104,9 @@
 		E6F3173B53E2A575B9D8F014 /* service-names-port-numbers.csv */ = {isa = PBXFileReference; path = "service-names-port-numbers.csv"; sourceTree = "<group>"; };
 		F97E495DCA7304EEB5C9CE52 /* ServiceCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCatalogTests.swift; sourceTree = "<group>"; };
 		FCCE77AAB91C453D5468E833 /* Pasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
-		"TEMP_86758B15-3842-4002-B459-78E6E3A21CDA" /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
-		"TEMP_94453410-208A-41D3-9065-C19A44434C95" /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		"TEMP_E054472A-AD1F-44C2-8310-F35FF2E3400C" /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		"TEMP_4B2B3FB7-CE4D-486B-9F6C-C9DFBF83F977" /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		"TEMP_62AEAC34-0420-41FE-8369-A729D51EAA5F" /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		"TEMP_7334A2B5-D5F4-4FD0-80D7-4495B1D560B6" /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -231,14 +231,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_2DE075A2-0139-4385-8EDD-276915FB3490" /* Bonjeff */ = {
+		"TEMP_75F152F7-19DE-4C7D-A5ED-A0F42BB2E851" /* BonjourView */ = {
 			isa = PBXGroup;
 			children = (
-				"TEMP_86758B15-3842-4002-B459-78E6E3A21CDA" /* Base.xcconfig */,
-				"TEMP_94453410-208A-41D3-9065-C19A44434C95" /* Debug.xcconfig */,
-				"TEMP_E054472A-AD1F-44C2-8310-F35FF2E3400C" /* Release.xcconfig */,
+				"TEMP_4B2B3FB7-CE4D-486B-9F6C-C9DFBF83F977" /* Base.xcconfig */,
+				"TEMP_7334A2B5-D5F4-4FD0-80D7-4495B1D560B6" /* Debug.xcconfig */,
+				"TEMP_62AEAC34-0420-41FE-8369-A729D51EAA5F" /* Release.xcconfig */,
 			);
-			path = Bonjeff;
+			path = BonjourView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,7 +396,7 @@
 /* Begin XCBuildConfiguration section */
 		3D803D569E9581A914EDB2B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_86758B15-3842-4002-B459-78E6E3A21CDA" /* Base.xcconfig */;
+			baseConfigurationReference = "TEMP_4B2B3FB7-CE4D-486B-9F6C-C9DFBF83F977" /* Base.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -472,7 +472,7 @@
 		};
 		BCA72484792920631D68CFE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_86758B15-3842-4002-B459-78E6E3A21CDA" /* Base.xcconfig */;
+			baseConfigurationReference = "TEMP_4B2B3FB7-CE4D-486B-9F6C-C9DFBF83F977" /* Base.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -525,7 +525,7 @@
 		};
 		C386E7F1568DBA0461448704 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_94453410-208A-41D3-9065-C19A44434C95" /* Debug.xcconfig */;
+			baseConfigurationReference = "TEMP_7334A2B5-D5F4-4FD0-80D7-4495B1D560B6" /* Debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = nonsource/Info.plist;
@@ -550,7 +550,7 @@
 		};
 		F8400D9652C510C74D12429B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = "TEMP_E054472A-AD1F-44C2-8310-F35FF2E3400C" /* Release.xcconfig */;
+			baseConfigurationReference = "TEMP_62AEAC34-0420-41FE-8369-A729D51EAA5F" /* Release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = nonsource/Info.plist;
