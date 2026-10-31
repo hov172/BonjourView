@@ -86,7 +86,9 @@ autopkg run -v BonjourView.munki   # or BonjourView.jamf / BonjourView.intune
 ```
 
 They download the release `.zip`, verify the app's Developer ID signature, wrap it in an installer
-package, and import or upload it with the app icon.
+package, and import or upload it with the app icon. The short `hov172/autopkg-recipes` form is all AutoPkg needs: it expands to
+`https://github.com/hov172/autopkg-recipes` on its own, and the repo is public, so no GitHub account
+is required.
 
 ## Uninstalling
 
