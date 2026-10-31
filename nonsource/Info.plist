@@ -27,7 +27,7 @@
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>BonjourView browses your local network to show the Bonjour services advertised on it.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2017-2026 Jeff Johnson. All rights reserved.</string>
+	<string>Copyright © 2026 Ayala Solutions. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

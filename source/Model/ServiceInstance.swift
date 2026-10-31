@@ -44,7 +44,7 @@ final class ServiceInstance: Identifiable {
 	}
 
 	static func id(name: String, type: String, domain: String) -> String {
-		"\(name).\(type)\(domain)".lowercased()
+		(name + "." + type + domain).lowercased()
 	}
 
 	var kind: ServiceKind { ServiceCatalog.kind(forType: type, txtKeys: txtRecords.map(\.key)) }

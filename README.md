@@ -1,6 +1,8 @@
 # BonjourView
 
-BonjourView (formerly Bonjeff) is a Mac app that shows you a live display of the Bonjour services published on your network. BonjourView is intended as a replacement for the discontinued Bonjour Browser app by Tildesoft. Bonjour Browser predated Gatekeeper and thus is not code signed with a Developer ID certificate or notarized by Apple. BonjourView is validly code signed and notarized, which allows it to be installed on Macs protected by Gatekeeper.
+BonjourView is a Mac app that shows every Bonjour (mDNS / DNS-SD) service on your network as it appears and disappears. It identifies what each service is, decodes machine-generated names, and lets you open, copy or export what it finds. The app is signed with a Developer ID certificate and notarized, so it installs cleanly on Gatekeeper-protected Macs.
+
+It fills the gap left by Tildesoft's discontinued Bonjour Browser and was inspired by Jeff Johnson's [Bonjeff](https://github.com/lapcat/Bonjeff).
 
 ![ScreenShot](screenshots/bonjeff_ui_v3.png)
 
@@ -72,7 +74,7 @@ On macOS 15 and later the system asks for Local Network permission on first laun
 1. Download `BonjourView-<version>.dmg` from the [latest release](https://github.com/hov172/BonjourView/releases/latest).
 2. Open the disk image and drag `BonjourView` to the Applications folder.
 
-The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. Jeff Johnson's original Bonjeff releases remain available at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff/releases).
+The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. 
 
 ## Uninstalling
 
@@ -101,13 +103,13 @@ Maintenance scripts:
 
 ### Code signing
 
-The project is configured to code sign the app. You need a valid Apple Development certificate in your keychain and your Apple Developer Program Team ID in the build settings. Create a file named `DEVELOPMENT_TEAM.xcconfig` in the project folder (next to [Base.xcconfig](Base.xcconfig)) containing:
+Builds are signed automatically. Put your Apple Developer Team ID in a file named `DEVELOPMENT_TEAM.xcconfig` next to [Base.xcconfig](Base.xcconfig):
 
 ```
 DEVELOPMENT_TEAM = [Your TeamID]
 ```
 
-The [.gitignore](.gitignore) file keeps `DEVELOPMENT_TEAM.xcconfig` out of the repository.
+That file is listed in [.gitignore](.gitignore) and never committed. Without it the app still builds, unsigned, for local use.
 
 ### Continuous integration
 
@@ -128,17 +130,13 @@ The [.gitignore](.gitignore) file keeps `DEVELOPMENT_TEAM.xcconfig` out of the r
 
 ## Credits
 
-BonjourView began as Bonjeff, created by [Jeff Johnson](https://lapcatsoftware.com/) of Lapcat Software. The original project lives at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff), and its discovery design is still the heart of this app: the meta-query that enumerates service types, lazy resolving, case-insensitive de-duplication, and the careful handling of malformed TXT records all come from that code.
+BonjourView is an independent SwiftUI implementation. It was inspired by [Bonjeff](https://github.com/lapcat/Bonjeff) by [Jeff Johnson](https://lapcatsoftware.com/) of Lapcat Software, which showed that a Bonjour browser belongs in a signed, notarized native Mac app. No code from Bonjeff is used here; the resemblance is in purpose and in the service-type meta-query approach that Apple documents in [QA1337](https://developer.apple.com/library/archive/qa/qa1337/). If you want the original, Jeff's releases are at [github.com/lapcat/Bonjeff](https://github.com/lapcat/Bonjeff/releases).
 
-This version started from the fork at [github.com/YesThatAllen/Bonjeff](https://github.com/YesThatAllen/Bonjeff), whose maintainer also contributed README updates to the original project. The hex display of binary TXT record data in Bonjeff 2.0.1 was contributed upstream by [bauerschwan](https://github.com/bauerschwan).
-
-The SwiftUI interface, service-name identification, IANA registry integration, name decoding, export and search in version 3.0 were added on top of that work. Thanks to everyone who made the original available and kept it alive.
+Service names come from the [IANA Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/).
 
 ## Author
 
-Original author: [Jeff Johnson](https://lapcatsoftware.com/)
-
-To support the original author, you can [PayPal.Me](https://www.paypal.me/JeffJohnsonWI) or buy StopTheMadness Pro in the [Mac App Store](https://apps.apple.com/app/stopthemadness/id6471380298?mt=12).
+[Ayala Solutions](https://github.com/hov172)
 
 ## 🌐 Connect With Me
 
@@ -152,13 +150,9 @@ To support the original author, you can [PayPal.Me](https://www.paypal.me/JeffJo
 - [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/hov172)
 - 📧 *Contact via GitHub, Social accounts issues or discussions*
 
-## Copyright
-
-Bonjeff is Copyright © 2017-2026 Jeff Johnson. All rights reserved.
-
 ## License
 
-See the [LICENSE.txt](LICENSE.txt) file for details.
+BonjourView is Copyright © 2026 Ayala Solutions and released under the [MIT License](LICENSE.txt).
 
 ---
 
