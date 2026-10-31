@@ -4,7 +4,7 @@ BonjourView is a Mac app that shows every Bonjour (mDNS / DNS-SD) service on you
 
 It fills the gap left by Tildesoft's discontinued Bonjour Browser and was inspired by Jeff Johnson's [Bonjeff](https://github.com/lapcat/Bonjeff).
 
-![ScreenShot](screenshots/bonjeff_ui_v3.png)
+![ScreenShot](screenshots/bonjourview_ui.png)
 
 Requires macOS 14 Sonoma or later.
 
