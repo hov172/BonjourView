@@ -74,7 +74,7 @@ On macOS 15 and later the system asks for Local Network permission on first laun
 1. Download `BonjourView-<version>.dmg` from the [latest release](https://github.com/hov172/BonjourView/releases/latest).
 2. Open the disk image and drag `BonjourView` to the Applications folder.
 
-The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. 
+The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes.
 
 ### Deploying with AutoPkg (Munki, Jamf Pro, Intune)
 
@@ -126,7 +126,8 @@ That file is listed in [.gitignore](.gitignore) and never committed. Without it 
 ### Continuous integration
 
 - `.github/workflows/ci.yml` builds and runs the tests on every push and pull request.
-- `.github/workflows/release.yml` is started manually from the Actions tab with a tag name: it archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and publishes the zip as a GitHub release. Releases so far were built locally with the same steps plus a signed and notarized `.dmg`. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
+- `scripts/release.sh` archives a Release build, signs it with a Developer ID certificate, notarizes and staples it, and writes `BonjourView-<version>.dmg`, `BonjourView-<version>.zip` and their SHA-256 checksums to `build/release`. The version comes from `Shared.xcconfig`. The asset names are what the [AutoPkg recipes](https://github.com/hov172/autopkg-recipes) match on, so keep them. It needs `DEVELOPMENT_TEAM.xcconfig` plus either `NOTARY_PROFILE` (a `notarytool store-credentials` profile name) or `NOTARY_APPLE_ID` and `NOTARY_PASSWORD` in the environment, and it prints the `gh release create` command that publishes the result as `BonjourView <version>`.
+- `.github/workflows/release.yml` runs the same script on GitHub Actions when started manually from the Actions tab with a tag name, and publishes the release itself. It needs these repository secrets: `DEVELOPER_ID_CERTIFICATE_P12`, `DEVELOPER_ID_CERTIFICATE_PASSWORD`, `DEVELOPMENT_TEAM`, `NOTARY_APPLE_ID`, `NOTARY_PASSWORD`.
 
 ### Project layout
 
