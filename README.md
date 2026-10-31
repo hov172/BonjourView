@@ -1,4 +1,4 @@
-# BonjourView
+# <img src="screenshots/icon.png" width="48" align="top" alt=""> BonjourView
 
 BonjourView is a Mac app that shows every Bonjour (mDNS / DNS-SD) service on your network as it appears and disappears. It identifies what each service is, decodes machine-generated names, and lets you open, copy or export what it finds. The app is signed with a Developer ID certificate and notarized, so it installs cleanly on Gatekeeper-protected Macs.
 
