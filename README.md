@@ -76,6 +76,18 @@ On macOS 15 and later the system asks for Local Network permission on first laun
 
 The disk image and the app are signed with a Developer ID certificate and notarized by Apple, so Gatekeeper opens them without warnings. A `.zip` of the same app is attached to each release for scripted installs, with SHA-256 checksums in the release notes. 
 
+### Deploying with AutoPkg (Munki, Jamf Pro, Intune)
+
+Recipes for managed fleets live in [hov172/autopkg-recipes](https://github.com/hov172/autopkg-recipes):
+
+```bash
+autopkg repo-add hov172/autopkg-recipes
+autopkg run -v BonjourView.munki   # or BonjourView.jamf / BonjourView.intune
+```
+
+They download the release `.zip`, verify the app's Developer ID signature, wrap it in an installer
+package, and import or upload it with the app icon.
+
 ## Uninstalling
 
 1. Move `BonjourView.app` to the Trash.
